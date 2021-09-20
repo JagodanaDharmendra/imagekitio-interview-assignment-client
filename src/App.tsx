@@ -18,7 +18,7 @@ class App extends Component<Props, State> {
   }
 
   componentDidMount() {
-    
+    console.log("componentDidMount");
   }
 
   render() {
