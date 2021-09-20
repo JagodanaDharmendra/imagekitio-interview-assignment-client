@@ -1,36 +1,30 @@
 import React, { Component } from "react";
 
 interface Props {
-  a?: number;
-}
-interface State {
-  currentFolder: string;
-  loading: boolean;
+  fileId: string;
 }
 
-class App extends Component<Props, State> {
+interface State {
+  loading: boolean;
+  data: String | null;
+}
+
+export default class File extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      currentFolder: "Folder_0",
       loading: true,
+      data: null,
     };
   }
 
-  componentDidMount() {
-    
-  }
+  componentDidMount() {}
 
   render() {
     if (this.state.loading) {
       return <div>Loading...</div>;
     }
-    return (
-      <div>
-        <h1>ImageKit IO</h1>
-      </div>
-    );
+
+    return <div>Folder</div>;
   }
 }
-
-export default App;
